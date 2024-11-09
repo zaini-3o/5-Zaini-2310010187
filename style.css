@@ -1,0 +1,105 @@
+/* Mengatur gaya dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Latar belakang animasi */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('LOK.jpg') no-repeat center center/cover;
+    filter: blur(8px);
+    z-index: -1;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Efek animasi fade-in */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Desain header */
+header {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #4CAF50;
+}
+
+/* Gaya biodata */
+.biodata {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.biodata h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Desain profil */
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 140px;
+    height: 170px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 3px solid #4CAF50;
+    transition: transform 0.3s;
+}
+
+.profile img:hover {
+    transform: scale(1.1);
+}
+
+.info p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Desain footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile img {
+        margin-bottom: 20px;
+    }
+
+    .background {
+        background-position: top;
+    }
+}
